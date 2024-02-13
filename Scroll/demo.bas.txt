@@ -1,0 +1,6 @@
+#program Demo
+#autoline 10,10
+
+LOAD "scroll.bin" CODE
+@loop
+RANDOMIZE USR 59990: PAUSE 1: GO TO @loop
