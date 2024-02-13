@@ -10,7 +10,8 @@ RANDOMIZE USR 59990: PAUSE 1: GO TO @loop
 
 DEFPROC init()
     BORDER 0: INK 4: PAPER 0: BRIGHT 0: CLS
-
+    PROC title()
+    
     ; Load in the Scroll machine code program
     LOAD "scroll.bin" CODE 59990
     ; Load in a custom font
@@ -44,4 +45,10 @@ ENDPROC
 DEFPROC font()
     LOAD "Reactor.ch8" CODE %$FA00,768
     POKE 23607,%$F9: POKE 23606,0
+ENDPROC
+
+
+DEFPROC title()
+    PRINT AT 8,8;"ZX Spectrum Next"
+    PRINT AT 9,9;"Scrolling Demo"
 ENDPROC
