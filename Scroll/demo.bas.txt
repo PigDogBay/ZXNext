@@ -20,6 +20,7 @@ DEFPROC init()
     ; Load the text into memory
     PROC setupText(message$)
     PROC initMachineCode()
+    ;PROC colourText()
 ENDPROC
 
 DEFPROC setupText(text$)
@@ -52,3 +53,10 @@ DEFPROC title()
     PRINT AT 8,8;"ZX Spectrum Next"
     PRINT AT 10,9;"Scrolling Demo"
 ENDPROC
+
+DEFPROC colourText()
+FOR %i=23264 TO 23295
+    POKE %i,%(i MOD 7) + 1
+NEXT %i
+ENDPROC
+
