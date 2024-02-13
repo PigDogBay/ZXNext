@@ -50,5 +50,5 @@ ENDPROC
 
 DEFPROC title()
     PRINT AT 8,8;"ZX Spectrum Next"
-    PRINT AT 9,9;"Scrolling Demo"
+    PRINT AT 10,9;"Scrolling Demo"
 ENDPROC
