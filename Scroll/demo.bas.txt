@@ -1,10 +1,19 @@
 #program Demo
 #autoline 10,10
 
+#; This program uses the machine code from the Scroll.bas program
+#; which scrolls a line of text along the bottom of the screen.
+#; This ZX Next BASIC program loads in the machine code routine and 
+#; a custom font, it then displays a scrolling message. 
+#; It is a simple program showing you how to use the machine code
+#; routine for your own programs.
+
 RUN AT 0
 message$="...ZX Next Scrolling text demo by Pig Dog Bay,   Reactor font by Damien Guard.       The machine code routine was written in 1989 and appeared in Robin Alway's SPEX column in the magazine, New Computer Express.            "
 PROC init()
 
+; The machine code needs to be called every 20ms
+; as it only scrolls the line of text 1 pixel to the left per call
 @loop
 RANDOMIZE USR 59990: PAUSE 1: GO TO @loop
 
@@ -23,10 +32,12 @@ DEFPROC init()
     ;PROC colourText()
 ENDPROC
 
+; Copies the text string into memory
 DEFPROC setupText(text$)
     FOR %i = 60101 TO 60100 + LEN text$
         POKE %i, CODE text$(%i - 60100)
     NEXT %i
+    ; Append string terminator
     POKE %i+1,%$FF
 ENDPROC
 
