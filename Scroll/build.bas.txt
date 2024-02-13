@@ -2,7 +2,7 @@
 #autoline 10,10
 
 .sync
-cd "C:/home/scroll"
+cd "C:/home/ZXNext/Scroll"
 .txt2bas "scroll.bas.txt"
 .txt2bas "demo.bas.txt"
 ;load "scroll.bas"
