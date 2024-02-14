@@ -12,7 +12,7 @@ Optional Tools
 --------------
 The ZX Next has everything you need. For advanced users, you may find the following tools useful:
 
-VSCode    - Creating *.bas.txt files
+VSCode    - Editing *.bas.txt files
 NextSync  - download files from PC to the Next
 z80dasm   - Z80 disassembler for Linux/MacOS
 tail      - Utility to stream the contents of a file
