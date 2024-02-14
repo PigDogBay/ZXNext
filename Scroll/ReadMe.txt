@@ -72,10 +72,10 @@ Reactor.ch8
 scroll.bin
 
 Convert demo.bas.txt to BASIC
-From BASIC enter
-.txt2bas demo.bas.txt
-Open the browser and click on demo.bas
+From BASIC enter:
 
+.txt2bas demo.bas.txt
+LOAD "demo.bas"
 
 
 
