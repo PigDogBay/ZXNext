@@ -96,7 +96,7 @@ tail -c 129 scroll.bin > mc.bin
 From a Linux/MacOS/WSL command line:
 z80dasm scroll.bin -a -l -g 59990 -t -o scroll.asm
 
-The version of Scroll.asm contains plentiful comments and has been symbolised, use this to understand how the machine code works.
+The version of Scroll.asm included here contains plentiful comments and has been symbolised, use this to understand how the machine code works.
 
 
 
