@@ -1,7 +1,8 @@
 ; z80dasm 1.1.6
 ; command line: z80dasm -a -l -g 59990 -t -o scroll.asm scroll.bin
 
-	org	0ea56h (59990)
+; This is now set in build.asm 
+;	org	0ea56h (59990)
 
 ;
 ; This code will scroll a message along the bottom of the screen 1 pixel at a time
@@ -108,7 +109,7 @@ RotatePIXELS:
 	jr Scroll			;eab1	18 ea
 
 ; Working Area
-; PIXELS                ;eaba    8 bytes that make up the character been scrolled onto the display
-; TEXT_PTR              ;eac2    2 byte pointer (low,high) to the next character in the text message to be scrolled onto the screen
-; ROTATIONS             ;eac4    1 byte, number of rotations needed to scroll the character to the left  
-; TEXT                  ;eac5    n bytes, characters of the text to be scrolled + $ff as the string terminator
+PIXELS:	    	    EQU $eaba    ;8 bytes that make up the character been scrolled onto the display
+TEXT_PTR:       	EQU $eac2    ;2 byte pointer (low,high) to the next character in the text message to be scrolled onto the screen
+ROTATIONS:       	EQU $eac4    ;1 byte, number of rotations needed to scroll the character to the left  
+TEXT:            	EQU $eac5    ;n bytes, characters of the text to be scrolled + $ff as the string terminator
