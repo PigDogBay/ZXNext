@@ -1,0 +1,11 @@
+#program build
+#autoline 10,10
+
+.sync
+cd "C:/home/Copper"
+print "Converting to BASIC"
+.txt2bas "build.bas.txt"
+.txt2bas "run.bas.txt"
+load "run.bas"
+STOP
+CLEAR:SAVE "build.bas" LINE 10

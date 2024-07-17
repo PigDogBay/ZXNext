@@ -1,0 +1,28 @@
+#program run
+#autoline 10,10
+#; MPD Bailey Technology 17th Jul 2024
+#; Copper - Sweeney Demo
+#; 
+LAYER 0: BORDER 0: PAPER 0: INK 7: CLS
+
+#;Reset COPPER CPC
+REG 97,0: REG 98,0
+for %i=%0 to %15
+#;Wait for scan line 10*8 + i
+REG 96,128: REG 96,%80+i
+#;Change Ink 7 palette colour to a shade of red
+REG 96,64: REG 96,7: REG 96,65: REG 96,%(i mod 8)<<2
+NEXT %i 
+
+#;Wait for scan line 12*8
+REG 96,128: REG 96,96
+#;Change Ink 7 palette colour back to white
+REG 96,64:REG 96,7:REG 96,65: REG 96,@11111111
+
+#;Start Copper and reset on start of frame
+REG 97,0: REG 98,@11000000
+
+PRINT AT 10,5;"We're the Sweeney son"
+PRINT AT 11,1;"and we haven't had any dinner!"
+PAUSE 0
+#autoline
