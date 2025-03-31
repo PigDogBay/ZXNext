@@ -1,0 +1,29 @@
+{
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "block",
+  "files.defaultLanguage": ".bas",
+  "telemetry.enableTelemetry": false,
+  "[bas]": {
+    "editor.defaultFormatter": "em00k.nextbuild",
+    "editor.formatOnSave": true
+  },
+  "editor.tokenColorCustomizations": {
+    "strings": "#CF8E6D",
+    "comments": "#5f826b",
+    "numbers": "#2AACB8",
+    "keywords": "#56A8F5",
+    "functions": "#bcbecf",
+    "variables": "#bcbec4",
+    "types": "#bcbec4"
+  }
+
+  //Xcode
+  // "editor.tokenColorCustomizations": {
+  //   "strings": "#FC6A5D",
+  //   "comments": "#6C7986",
+  //   "numbers": "#D0BF69",
+  //   "keywords": "#FC5FA3",
+  //   "functions": "#56A8F5",
+  //   "variables": "#bcbec4",
+  //   "types": "#D0A8FF"
+  // }}

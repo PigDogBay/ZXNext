@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "dezog",
+            "request": "launch",
+            "name": "ZXNext",
+            "remoteType": "zxnext",
+            "zxnext": {
+                "serial": "/dev/tty.usbserial-A50285BI"
+            },
+            "history": {
+                "reverseDebugInstructionCount": 1000000,
+                "spotCount": 10
+            },
+            "startAutomatically": false,
+            "commandsAfterLaunch": [],
+            "rootFolder": "${workspaceFolder}/build",
+            //DeZog will read this from the NEX file
+            //"topOfStack": "0x7ffe",
+            "load": "${fileBasenameNoExtension}.nex",
+            "smallValuesMaximum": 513,
+            "tmpDir": ".tmp"
+        },
+        {
+            "name": "Python Dbg",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "./scripts/build.py",
+            "args": ["${file}"],
+            "console": "integratedTerminal"
+        }
+    ]
+}

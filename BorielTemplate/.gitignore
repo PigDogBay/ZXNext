@@ -1,0 +1,16 @@
+# Ignore build directory
+build/
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore backup files
+*.bak
+*.old
+*.orig
+
+# Ignore Python cache (if using Python scripts like build.py)
+__pycache__/
+*.pyc
+*.pyo
