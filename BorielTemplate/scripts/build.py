@@ -13,7 +13,7 @@ BMP_FILE = None
 
 # Directory setup
 workspace_dir = os.getcwd()
-compiler_dir = os.path.abspath("../../tools/zxbasic-1.17.3")
+compiler_dir = os.path.abspath("../../../tools/zxbasic-1.17.3")
 compiler_lib_dir = os.path.join(compiler_dir, "src/lib/arch/zxnext/stdlib")
 build_dir_relative = "./build/"
 build_dir = os.path.abspath(os.path.join(workspace_dir, "build"))
@@ -38,6 +38,8 @@ errno = zxbc.main([
     "-S", ORG,
     "-O", OPTIMIZE,
     "-H", HEAP,
+    "--explicit",
+    "--arch", "zxnext",
     "-M", os.path.join(build_dir_relative, "Memory.txt"),
     "-o", os.path.join(build_dir_relative, f"{base_name}.bin"),
     "-I", compiler_lib_dir
